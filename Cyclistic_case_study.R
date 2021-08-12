@@ -89,7 +89,7 @@ all_trips$day <- format(as.Date(all_trips$date), "%d")
 all_trips$year <- format(as.Date(all_trips$date), "%Y")
 all_trips$day_of_week <- format(as.Date(all_trips$date), "%a")
 
-##checking unique values
+##Checking unique values
 unique(all_trips$month)
 unique(all_trips$day_of_week)
 
