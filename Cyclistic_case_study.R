@@ -1,6 +1,6 @@
-#Google Data Analytics professional Certificate Case Study - Cysclistic
+Google Data Analytics professional Certificate Case Study - Cysclistic
 
-##Loading packages
+--Loading packages
 
 library(tidyverse)
 library(lubridate)
