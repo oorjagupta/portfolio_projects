@@ -4,12 +4,11 @@ From port..CovidDeaths
 where continent is not null
 Order by 3, 4
 
-
 Select *
 From port..CovidVaccinations
 Order by 3, 4
 
--- DATA
+--  EXTRACTING DATA
 
 Select continent, location, date, total_cases, new_cases, total_deaths, population
 From port..CovidDeaths
@@ -90,7 +89,6 @@ order by 2,3
 
 --USE CTE
 
-
 with PopvsVac (Continent, Location, Date, Population, new_vaccinations, TotalVaccinated)
 as
 (
@@ -119,7 +117,6 @@ Population numeric,
 New_vaccinations numeric,
 TotalVaccinated numeric
 )
-
 Insert Into #PercentPopulationVaccinated
 Select dea.continent, dea.location, dea.date, dea.population, vac.new_vaccinations
 , SUM(CONVERT(int, vac.new_vaccinations)) OVER (Partition by dea.location ORDER by dea.location,
